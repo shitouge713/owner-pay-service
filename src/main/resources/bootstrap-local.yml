@@ -98,4 +98,13 @@ seata:
       password: nacos
       group: SEATA_GROUP
     type: nacos
-
+# 将feign调用日志打印到控制台
+feign:
+  client:
+    config:
+      default:
+        logger-level: FULL
+# 配置日志级别为debug
+logging:
+  level:
+    com.owner.pay.*.*: debug
