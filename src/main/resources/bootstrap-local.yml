@@ -11,10 +11,8 @@ spring:
         namespace: owner-pay-parent
         file-extension: yml
         group: HSH_GROUP
-    alibaba:
-      seata:
-        #该值必须和config.txt文件中的分组名称一致
-        tx-service-group: qy151
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
   datasource:
     dynamic:
       primary: pay
@@ -80,24 +78,6 @@ mybatis-plus:
 server:
   port: 8099
 
-seata:
-  registry:
-    nacos:
-      #指定seata服务器在注册中心的名称 默认seata-server
-      application: seata-server
-      username: nacos
-      password: nacos
-      #指定seata服务器在注册中心的组名 默认SEATA_GROUP
-      group: SEATA-GROUP
-      #指定seata服务器所在的注册中心的地址
-      server-addr: localhost:8848
-  config:
-    nacos:
-      server-addr: localhost:8848
-      username: nacos
-      password: nacos
-      group: SEATA_GROUP
-    type: nacos
 # 将feign调用日志打印到控制台
 feign:
   client:
