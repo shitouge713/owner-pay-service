@@ -23,8 +23,11 @@ public class CartDomain extends ServiceImpl<OCartMapper, OCart> implements IServ
     @Autowired
     private OCartMapper oCartMapper;
 
-    public Integer ownerBatchInsert(Collection<OCart> cart) {
-        return oCartMapper.insertBatch(cart);
+    public Integer ownerBatchInsert(Collection<OCart> carts) {
+        for (OCart cart : carts) {
+            oCartMapper.insert(cart);
+        }
+        return 1;
     }
 
 }

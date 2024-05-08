@@ -103,11 +103,11 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
             <version>${ali.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
@@ -140,11 +140,11 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <!--feign依赖-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.2.0.RELEASE</version>
-        </dependency>
+        </dependency>-->
         <!--hystrix依赖，主要是用  @HystrixCommand -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
