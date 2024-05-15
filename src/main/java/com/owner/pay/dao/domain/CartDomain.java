@@ -1,5 +1,6 @@
 package com.owner.pay.dao.domain;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.owner.pay.dao.mapper.OCartMapper;
@@ -8,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
+import java.util.List;
 
 /**
  * @Title CartDomain
@@ -23,11 +24,13 @@ public class CartDomain extends ServiceImpl<OCartMapper, OCart> implements IServ
     @Autowired
     private OCartMapper oCartMapper;
 
-    public Integer ownerBatchInsert(Collection<OCart> carts) {
-        for (OCart cart : carts) {
-            oCartMapper.insert(cart);
-        }
-        return 1;
+    public List<OCart> queryByUserId(String userId) {
+        List<OCart> list = oCartMapper.selectList(new LambdaQueryWrapper<OCart>().eq(OCart::getUserId, userId));
+        return list;
+    }
+
+    public int deleteByUserId(String userId) {
+        return oCartMapper.delete(new LambdaQueryWrapper<OCart>().eq(OCart::getUserId, userId));
     }
 
 }

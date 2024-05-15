@@ -50,12 +50,11 @@ public class ProduceServiceImpl implements ProduceService {
         // 如果实际库存小于库存 那么需要把这条数据记录到一张专门用于记录分布式事务的表，通过这个key当业务逻辑保证事务最终一致性
         if (produce.getStore() - store < 0) {
             /**
-             * TODO 首先实际开发 不可能到这里才判断库存是否不足，而是下订单那边就确定好库存是否充足
+             * 首先实际开发 不可能到这里才判断库存是否不足，而是下订单那边就确定好库存是否充足
              * 因为RocketMQ是最终一致性事务，不可能这边异常那边确已经告知用户下单正常，最后为了保证事务一致性在去修改这个订单为失败，用户会懵逼的
              */
             //模拟保存MQ异常表 用于人工处理 保证事务一致性
             log.info("库存不足，扣减失败。商品ID = {},商品当前库存 = {},所需库存 = {}，分布式事务key = {}", produceId, produce.getStore(), store, key);
-
             throw new Exception("库存不足，更新库存失败");
         }
         log.info("更新库存成功。商品ID = {},商品当前库存 = {},销售库存 = {}，分布式事务key = {}", produceId, produce.getStore(), store, key);

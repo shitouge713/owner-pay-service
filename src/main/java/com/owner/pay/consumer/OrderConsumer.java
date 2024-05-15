@@ -14,10 +14,10 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * @author xub
+ * @author sxl
  * @Description: 消费端跟之前普通消费没区别
  * 因为分布式事务主要是通过 生产端控制 消息的发送
- * @date 2019/7/15 下午12:43
+ * @date 2024/5/9 12:43
  */
 @Slf4j
 @Component
@@ -47,12 +47,11 @@ public class OrderConsumer {
                 produceService.updateStore(productId, total, key);
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
             } catch (Exception e) {
-                log.info("消费失败，进行重试，重试到一定次数 那么将该条记录记录到数据库中，进行如果处理");
+                log.info("消费失败，进行重试，重试到一定次数 那么将该条记录记录到数据库中，进行后续处理");
                 e.printStackTrace();
                 return ConsumeConcurrentlyStatus.RECONSUME_LATER;
             }
         });
-
         consumer.start();
         System.out.println("consumer start ...");
     }

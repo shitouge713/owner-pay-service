@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface IRemoteOrderService {
 
     /**
-     * 省市区地址编码查询
+     * 远程调用订单服务
      *
      * @param
      * @return

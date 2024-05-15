@@ -24,6 +24,11 @@ public class CartServiceImpl implements ICartService {
     @Autowired
     private IRemoteOrderService remoteOrderService;
 
+    /**
+     * seata-AT模式处理分布式事务
+     *
+     * @return
+     */
     @Override
     @GlobalTransactional
     public Boolean save() {
@@ -38,9 +43,27 @@ public class CartServiceImpl implements ICartService {
         List<OCart> carList = new ArrayList();
         carList.add(cart1);
         carList.add(cart2);
-        cartDomain.ownerBatchInsert(carList);
+        for (OCart car : carList) {
+            cartDomain.save(car);
+        }
         log.info("支付业务插入数据成功");
         remoteOrderService.handleOrder();
         return true;
+    }
+
+    @Override
+    public List<OCart> queryByUserId(String userId) {
+        return cartDomain.queryByUserId(userId);
+    }
+
+    /**
+     * 这个如果不用@GlobalTransactional，可能会导致脏写，就是写操作 对全局事务未执行完但本地事务执行完的数据进行了修改，造成脏写
+     * @param userId
+     * @return
+     */
+    @Override
+    @GlobalTransactional
+    public int deleteByUserId(String userId) {
+        return cartDomain.deleteByUserId(userId);
     }
 }
