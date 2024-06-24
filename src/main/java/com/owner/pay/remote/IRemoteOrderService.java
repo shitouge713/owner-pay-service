@@ -1,5 +1,6 @@
 package com.owner.pay.remote;
 
+import com.owner.pay.vo.Result;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
@@ -23,5 +24,5 @@ public interface IRemoteOrderService {
      * @return
      */
     @GetMapping("/car/insert")
-    void handleOrder();
+    Result handleOrder();
 }

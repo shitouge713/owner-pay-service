@@ -4,25 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd7724f9-e634-4d7c-96e7-9f86bc38351f" name="Default" comment="rocketMq  分布式事务">
+    <list default="true" id="dd7724f9-e634-4d7c-96e7-9f86bc38351f" name="Default" comment="seata  AT模式下脏读、脏写问题的验证和避免">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_seata_2023_0_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_seata_seata_spring_autoconfigure_client_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_seata_seata_spring_autoconfigure_core_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_ST4_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_dubbo_extensions_dubbo_filter_seata_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/enums/ReturnStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/exception/NoWarnException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/vo/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_61_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_seata_2_2_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_seata_seata_all_1_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_seata_seata_all_2_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_seata_seata_spring_boot_starter_1_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_seata_seata_spring_boot_starter_2_0_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/owner-pay-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/owner-pay-service.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/owner/pay/consumer/OrderConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/consumer/OrderConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/owner/pay/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/controller/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/owner/pay/dao/domain/CartDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/dao/domain/CartDomain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/owner/pay/dao/pojo/OCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/dao/pojo/OCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/owner/pay/remote/IRemoteOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/remote/IRemoteOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/owner/pay/service/ICartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/service/ICartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/owner/pay/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/owner/pay/service/impl/ProduceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owner/pay/service/impl/ProduceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bootstrap-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bootstrap-local.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bootstrap-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bootstrap-local.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/owner/pay/consumer/OrderConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/owner/pay/consumer/OrderConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/owner/pay/controller/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/owner/pay/controller/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/owner/pay/dao/domain/CartDomain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/owner/pay/dao/domain/CartDomain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/owner/pay/dao/pojo/OCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/owner/pay/dao/pojo/OCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/owner/pay/remote/IRemoteOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/owner/pay/remote/IRemoteOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/owner/pay/service/ICartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/owner/pay/service/ICartService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/owner/pay/service/impl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/owner/pay/service/impl/CartServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/owner/pay/service/impl/ProduceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/owner/pay/service/impl/ProduceServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,34 +192,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/owner-project/hc-code/order_parent&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;ad80d3ceaeac15d96da8576c4c72183b&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "D:/owner-project/owner-code/TCC/spring-cloud-rest-tcc",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "ad80d3ceaeac15d96da8576c4c72183b"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\owner-project\owner-code\owner-pay-service\src\main\java\com\owner\pay" />
       <recent name="E:\owner-pay-service\src\main\java\com\owner\pay\mybatis-plus" />
       <recent name="E:\owner-pay-service\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.owner.pay.enums" />
+      <recent name="com.owner.pay.vo" />
       <recent name="com.owner.pay.service.impl" />
       <recent name="com.owner.pay.service" />
       <recent name="com.owner.pay.consumer" />
-      <recent name="com.owner.pay.model" />
-      <recent name="com.owner.pay.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.OwnerPayServiceApplication">
@@ -311,7 +320,7 @@
       <workItem from="1715072222178" duration="538000" />
       <workItem from="1715131775265" duration="13386000" />
       <workItem from="1715217502161" duration="15181000" />
-      <workItem from="1715736902392" duration="2254000" />
+      <workItem from="1715736902392" duration="11915000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1681286563384</created>
@@ -348,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715171723403</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="seata  AT模式下脏读、脏写问题的验证和避免">
+      <created>1715739228311</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715739228311</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -409,7 +425,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="增加nacos配置、seata配置" />
     <MESSAGE value="rocketMq  分布式事务" />
-    <option name="LAST_COMMIT_MESSAGE" value="rocketMq  分布式事务" />
+    <MESSAGE value="seata  AT模式下脏读、脏写问题的验证和避免" />
+    <option name="LAST_COMMIT_MESSAGE" value="seata  AT模式下脏读、脏写问题的验证和避免" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
